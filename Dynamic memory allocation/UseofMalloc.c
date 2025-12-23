@@ -24,12 +24,12 @@ int main(){
     // Assign data and link nodes
     head->data =  61;
     head->next = second;
-    second->data = 71;
+    second->data = 70;
     second->next = third;
     third->data = 81;
     third->next = NULL;
     
-    // Traverse the list
+    // Traverse the list by calling the function
     traverse(head);
     printf("null\n");
     return 0;
