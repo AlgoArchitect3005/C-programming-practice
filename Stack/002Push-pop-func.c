@@ -24,11 +24,11 @@ void popat_index (struct Stack* s2, int index){
     if(s2->top ==-1){
         printf("Stack underflow\n");
     }
-    elseif(index <0 || index > s2->top){
+    else if(index <0 || index > s2->top){
         printf("Invalid index\n");
     }
     else{
-        printf("Pooped elements at index %d is: %d \n",index,s2->arr[index]);
+        printf("Pooped elements at index %d is: %d \n", index+1 ,s2->arr[index]);
     }
 }
 
@@ -40,12 +40,13 @@ int main(){
     s->arr=(int*)malloc(s->size * sizeof(int));
     
     // Push elements onto the stack
-    for(int i=0 ; i < s->size ; i++){
+    for(int i=1 ; i <= s->size ; i++){
         push(s , i+10);
     }
+     printf("\n\n");
 
     // Pop elements from the stack at specific indices
-    for(int i = 0 ; i < s->size; i++){
+    for(int i =s->top ; i>=0 ; i--){
         popat_index(s , i);
     }
     return 0;
