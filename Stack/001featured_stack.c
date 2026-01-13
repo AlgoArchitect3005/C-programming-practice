@@ -88,7 +88,8 @@ void push (struct Stack*s , int value){
 //case 2:
 void pop_at_index (struct Stack*s , int index){
     if(s->top == -1){
-        printf("Stack underflow\n");
+        printf("Can't pop\n");
+     printf("Stack underflow\n");
     }
     else if(index <0 || index > s->top){
         printf("Invalid index\n");
