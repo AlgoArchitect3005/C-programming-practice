@@ -17,18 +17,30 @@ void is_full(struct Stack *s);
 
 int main (){
     struct Stack* s = (struct Stack*)malloc (sizeof (struct Stack));
-    // printf("Enter size of stack: ");
-    // scanf ("%d", &s->size);
-    // s->top = -1;
-    // s->arr = (int*) malloc (s->size * sizeof (int));
-    // printf ("Stack of size %d created successfully\n", s->size);
-    printf("0. Create Stack \n 1. Push\n2. Pop element at index i\n 3. Display stack\n4. Peek \n 5. Check- Is empty \n 6. Check- Is full \n 7. Exit\n");
+// <<<<<<< feature1
+//     // printf("Enter size of stack: ");
+//     // scanf ("%d", &s->size);
+//     // s->top = -1;
+//     // s->arr = (int*) malloc (s->size * sizeof (int));
+//     // printf ("Stack of size %d created successfully\n", s->size);
+//     printf("0. Create Stack \n 1. Push\n2. Pop element at index i\n 3. Display stack\n4. Peek \n 5. Check- Is empty \n 6. Check- Is full \n 7. Exit\n");
+// =======//Initialise stack
+  
+//     printf("0. Create Stack\n 1. Push\n2. Pop element at index i\n 3. Display stack\n4. Peek \n 5. Check- Is empty \n 6. Check- Is full \n 7. Exit\n");
+// >>>>>>> main
+   printf("0. Create Stack\n 1. Push\n2. Pop element at index i\n 3. Display stack\n4. Peek \n 5. Check- Is empty \n 6. Check- Is full \n 7. Exit\n");
+
     printf("Enter your choice: ");
     int choice , value;
     scanf ("%d", &choice);
     switch (choice) {
-        case 0:
-            // Create stack function call
+// <<<<<<< feature1
+//         case 0:
+//             // Create stack function call
+// =======//CSFC
+//         case 0 :
+//              // Create stack function call
+// >>>>>>> main
             create_stack(s);
             break;
         case 1:
@@ -80,6 +92,10 @@ void create_stack (struct Stack*s ){
     s->arr = (int*) malloc (s->size * sizeof (int));
     printf ("Stack of size %d created successfully\n", s->size);
 }
+// <<<<<<< feature1
+// =======//VP
+
+// >>>>>>> main
 //case1:
 void push (struct Stack*s , int value){
     if (s->top == s->size-1){
