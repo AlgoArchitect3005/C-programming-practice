@@ -9,7 +9,7 @@ struct Stack {
 // Function declarations 
 void create_stack(struct Stack *s);
 void push(struct Stack *s, int value);
-void pop(struct Stack *s);
+void pop_at_index(struct Stack *s , int index);
 void display(struct Stack *s);
 void peek(struct Stack *s);
 void is_empty(struct Stack *s);
@@ -17,14 +17,18 @@ void is_full(struct Stack *s);
 
 int main (){
     struct Stack* s = (struct Stack*)malloc (sizeof (struct Stack));
-
-   printf("0. Create Stack\n 1. Push\n2. Pop element at index i\n 3. Display stack\n4. Peek \n 5. Check- Is empty \n 6. Check- Is full \n 7. Exit\n");
-
+    // printf("Enter size of stack: ");
+    // scanf ("%d", &s->size);
+    // s->top = -1;
+    // s->arr = (int*) malloc (s->size * sizeof (int));
+    // printf ("Stack of size %d created successfully\n", s->size);
+    printf(" 0. Create Stack \n 1. Push\n 2. Pop element at index i\n 3. Display stack\n 4. Peek \n 5. Check- Is empty \n 6. Check- Is full \n 7. Exit\n");
     printf("Enter your choice: ");
-    int choice , value;
+    int choice , value , index;
     scanf ("%d", &choice);
     switch (choice) {
-
+        case 0:
+            // Create stack function call
             create_stack(s);
             break;
         case 1:
@@ -35,7 +39,6 @@ int main (){
             break;
         case 2:
             // Pop at index function call
-            int index;
             printf("Enter index to pop element from: ");
             scanf ("%d", &index);
             pop_at_index(s, index);
@@ -76,7 +79,6 @@ void create_stack (struct Stack*s ){
     s->arr = (int*) malloc (s->size * sizeof (int));
     printf ("Stack of size %d created successfully\n", s->size);
 }
-
 //case1:
 void push (struct Stack*s , int value){
     if (s->top == s->size-1){
