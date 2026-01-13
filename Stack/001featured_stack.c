@@ -17,56 +17,50 @@ void is_full(struct Stack *s);
 
 int main (){
     struct Stack* s = (struct Stack*)malloc (sizeof (struct Stack));
-    // printf("Enter size of stack: ");
-    // scanf ("%d", &s->size);
-    // s->top = -1;
-    // s->arr = (int*) malloc (s->size * sizeof (int));
-    // printf ("Stack of size %d created successfully\n", s->size);
     printf(" 0. Create Stack \n 1. Push\n 2. Pop element at index i\n 3. Display stack\n 4. Peek \n 5. Check- Is empty \n 6. Check- Is full \n 7. Exit\n");
-    printf("Enter your choice: ");
     int choice , value , index;
-    scanf ("%d", &choice);
-    switch (choice) {
-        case 0:
-            // Create stack function call
-            create_stack(s);
-            break;
-        case 1:
-            // Push function call
-            printf("Enter value to push: ");
-            scanf ("%d", &value);
-            push(s, value);
-            break;
-        case 2:
-            // Pop at index function call
-            printf("Enter index to pop element from: ");
-            scanf ("%d", &index);
-            pop_at_index(s, index);
-            break;
-        case 3:
-            // Display stack function call
-            display(s);
-            break;
-        case 4:
-            // Peek function call
-            peek(s);
-            break;
-        case 5:
-            // Is empty function call
-            is_empty(s);
-            break;
-        case 6:
-            // Is full function call
-            is_full(s);
-            break;
-        case 7:
-            printf("Exiting...\n");
-            break;
-        default:
-            printf("Invalid choice\n");
-            printf("The choice must be between 1 to 7\n");
-            break;
+    
+    while (1) {
+        printf("Enter your choice: ");
+        scanf ("%d", &choice);
+        switch (choice) {
+            case 0:
+                create_stack(s);
+                break;
+            case 1:
+                printf("Enter value to push: ");
+                scanf ("%d", &value);
+                push(s, value);
+                break;
+            case 2:
+                printf("Enter index to pop element from: ");
+                scanf ("%d", &index);
+                pop_at_index(s, index);
+                break;
+            case 3:
+                display(s);
+                break;
+            case 4:
+                peek(s);
+                break;
+            case 5:
+                is_empty(s);
+                break;
+            case 6:
+                is_full(s);
+                break;
+            case 7:
+                printf("Exiting...\n");
+                free(s->arr);
+                free(s);
+                break;
+            default:
+                printf("Invalid choice\n");
+                printf("The choice must be between 0 to 7\n");
+                break;
+        }
     }
+    return 0;
 }
 
 //case 0 :
