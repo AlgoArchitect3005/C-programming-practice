@@ -76,6 +76,7 @@ void create_stack (struct Stack*s ){
 //case1:
 void push (struct Stack*s , int value){
     if (s->top == s->size-1){
+         printf("Can't push\n");
         printf("Stack overflow\n");
     }
     else{
