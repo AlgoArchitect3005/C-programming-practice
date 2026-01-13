@@ -39,5 +39,14 @@ int main(){
     s->top =-1;
     s->arr=(int*)malloc(s->size * sizeof(int));
     
+    // Push elements onto the stack
+    for(int i=0 ; i < s->size ; i++){
+        push(s , i+10);
+    }
+
+    // Pop elements from the stack at specific indices
+    for(int i = 0 ; i < s->size; i++){
+        popat_index(s , i);
+    }
     return 0;
 }
