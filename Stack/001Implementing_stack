@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct Stack {
+    int top;
+    int size;
+    int* arr;
+};
+int main(){
+    // Create a stack of size 5
+    struct Stack* s = (struct Stack*)malloc(sizeof(struct Stack));
+    s->size=5;
+    s->top =-1;
+    s->arr=(int*)malloc(s->size * sizeof(int));
+    return 0
+}
