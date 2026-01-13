@@ -53,7 +53,7 @@ int main (){
                 printf("Exiting...\n");
                 free(s->arr);
                 free(s);
-                break;
+                exit(0);
             default:
                 printf("Invalid choice\n");
                 printf("The choice must be between 0 to 7\n");
