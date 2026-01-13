@@ -9,24 +9,24 @@ struct Point {
 
 int  main(){
     int n , i ;
-    struct Point *ptr;
+    struct Point *Alpha;
     printf("Enter number of points: ");
     scanf("%d", &n);
-    ptr = (struct Point*)calloc(n, sizeof(struct Point));
-    if(ptr == NULL){
+    Alpha = (struct Point*)calloc(n, sizeof(struct Point));
+    if(Alpha == NULL){
         printf("Memory not allocated");
         return 1;
     }
     // Input coordinates for each point
     for(i=0; i<n; i++){
         printf("Enter x and y coordinates for point %d: ", i+1);
-        scanf("%d %d", &ptr[i].x, &ptr[i].y);
+        scanf("%d %d", &Alpha[i].x, &Alpha[i].y);
     }
     // Display the points
     printf("The points are:\n");
     for(i=0; i<n; i++){
-        printf("Point %d: (%d, %d)\n", i+1, ptr[i].x, ptr[i].y);
+        printf("Point %d: (%d, %d)\n", i+1, Alpha[i].x, Alpha[i].y);
     }
-    free(ptr);
+    free(Alpha);
     return 0;
 }
