@@ -5,23 +5,23 @@ struct Node{
     int data;
     struct Node *next;
 };
-void push (struct Node* s ,int data){
+void push (struct Node** s ,int data){
 struct Node* newnode = (struct Node*)malloc(sizeof(struct Node));
 if( newnode == NULL ){
     printf("Stack Overflow\n");
     return;
   }
   newnode->data= data;
-  newnode->next = s;
-  s= newnode;
+  newnode->next = *s;
+  *s= newnode;
 }
-void pop(struct Node* s){
-    if(s== NULL){
+void pop(struct Node** s){
+    if(*s== NULL){
         printf("Stack Underflow\n");
         return;
     }
-    struct Node *temp=s;
-    s=s->next;
+    struct Node *temp=*s;
+    *s=(*s)->next;
     printf("Popped element is : %d\n", temp->data);
     free(temp);
 }
