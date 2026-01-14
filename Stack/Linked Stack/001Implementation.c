@@ -6,7 +6,13 @@ struct Node{
     struct Node *next;
 };
 void push (struct Node* s ,int data);
-  
+//   if(s==NULL){
+//     s =  
+//   }  
+struct Node* newnode = (struct Node*)malloc(sizeof(struct Node));
+  newnode->data= data;
+  newnode->next = s;
+  s= newnode;
 void pop(struct Node* s);
 
 int main(){
