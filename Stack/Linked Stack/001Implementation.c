@@ -11,9 +11,12 @@ if( newnode == NULL ){
     printf("Stack Overflow\n");
     return;
   }
+  else{
   newnode->data= data;
   newnode->next = *s;
   *s= newnode;
+   printf("Pushed element is : %d \n",newnode->data);
+  }
 }
 void pop(struct Node** s){
     if(*s== NULL){
@@ -35,6 +38,6 @@ push(&head,263);
 
 //pop elements from stack
 printf("\nPopping elements from stack\n");
-pop(head);
+pop(&head);
     return 0;
 }
