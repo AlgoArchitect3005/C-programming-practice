@@ -26,12 +26,15 @@ void pop(struct Node* s){
     free(temp);
 }
 
-struct Node *head = NULL;
 int main(){
+    struct Node *head = NULL;
 //push elements onto stack
-push(head,3);
+push(&head,3);
+push(&head,343);
+push(&head,263);
 
 //pop elements from stack
+printf("\nPopping elements from stack\n");
 pop(head);
     return 0;
 }
