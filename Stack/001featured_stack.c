@@ -126,7 +126,7 @@ void is_empty (struct Stack*s){
         printf("Stack is empty \n");
     }
     else{
-        printf("Stack is not empty \n");
+        printf("Stack is not empty ,It contains some elements \n");
     }
 }
 //case 6:
