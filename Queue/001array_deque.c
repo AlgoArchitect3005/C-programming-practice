@@ -1,4 +1,4 @@
-// Online C compiler to run C program online
+
 #include <stdio.h>
 #define MAXSIZE 20
 int queue[MAXSIZE], front = -1 , rear = -1 ;
