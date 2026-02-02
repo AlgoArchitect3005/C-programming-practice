@@ -48,6 +48,16 @@ void dequeue(struct Queue *q){
     }
 }
 
+//Function to check if the queue is empty
+void isEmpty (struct Queue *q){
+    if(q->front==-1 || q->front > q->rear){
+        printf("Queue is empty\n");
+    }
+    else{
+        printf("Queue is not empty\n");
+    }
+}
+// Main function
 int main(){
      struct Queue q;
      initialiseQueue(&q,10);
