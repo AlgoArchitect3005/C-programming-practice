@@ -44,6 +44,13 @@ struct Queue dequeue(struct Queue *q){
 
 int main(){
      struct Queue *q;
-     q=initialiseQueue(q,2);
+     q=initialiseQueue(q,10);
+     q=enqueue(q,10);
+     q=enqueue(q,20);
+     q=enqueue(q,30);
+     q=enqueue(q,40);
+     q=dequeue(q);
+     q=dequeue(q);
+
     return 0;
 }
