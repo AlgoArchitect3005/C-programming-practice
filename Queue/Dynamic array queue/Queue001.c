@@ -81,6 +81,16 @@ void display (struct Queue *q){
         printf("\n");
     }
 }
+
+// Function to find the peek element of the queue
+void peek (struct Queue *q){
+    if(q->front==-1 || q->front > q->rear){
+        printf("Queue is empty\n");
+    }
+    else{
+        printf("Peek element is : %d\n",q->arr[q->front]);
+    }
+}
 // Main function
 int main(){
      struct Queue q;
