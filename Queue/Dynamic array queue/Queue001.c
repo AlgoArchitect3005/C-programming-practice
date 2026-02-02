@@ -16,6 +16,9 @@ void initialiseQueue(struct Queue *q, int size){
     q->arr=(int*)malloc(q->size * sizeof(int));
 }
 
+  void space(){
+    printf(" \n");
+}
 // Function to add element to the queue
 struct Queue enqueue(struct Queue *q, int data){
    if(q->rear==q->size-1){
@@ -30,7 +33,7 @@ struct Queue enqueue(struct Queue *q, int data){
        q->rear++;
        q->arr[q->rear]=data;
    }
-    printf("Enqueued element is %d\n",q->arr[q->rear]);
+    printf("Enqueued element is : %d\n",q->arr[q->rear]);
     return *q;
 }
 
@@ -47,13 +50,14 @@ void dequeue(struct Queue *q){
 
 int main(){
      struct Queue q;
-     initialiseQueue(q,10);
-     enqueue(q,10);
-     enqueue(q,20);
-     enqueue(q,30);
-     enqueue(q,40);
-     dequeue(q);
-     dequeue(q);
+     initialiseQueue(&q,10);
+     enqueue(&q,10);
+     enqueue(&q,20);
+     enqueue(&q,30);
+     enqueue(&q,40);
+     space();
+     dequeue(&q);
+     dequeue(&q);
 
     return 0;
 }
