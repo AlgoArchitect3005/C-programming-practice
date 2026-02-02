@@ -8,3 +8,8 @@ struct Queue{
     int rear;
     int size;
 }
+
+int main(){
+     struct Queue q;
+    return 0;
+}
