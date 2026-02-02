@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 struct Queue{
-    int data;
+    
     int *arr;
     int front;
     int rear;
@@ -25,7 +25,7 @@ struct Queue enqueue(struct Queue *q, int data){
     }
     else{
         q->rear++;
-        q->arr[q-rear]=data;
+        q->arr[q->rear]=data;
     }
     printf("Enqueued element is %d\n",q->arr[q->rear]);
     return *q;
