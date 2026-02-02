@@ -32,15 +32,14 @@ struct Queue enqueue(struct Queue *q, int data){
     return *q;
 }
 // Function to delete element from the queue
-struct Queue dequeue(struct Queue *q){
-    if(q->front==-1 && q->rear==-1){
+void dequeue(struct Queue *q){
+    if(q->front==-1 || q->front > q->rear){
         printf("Queue is empty\n");
     }
     else{
         printf("Dequeued element is : %d\n",q->arr[q->front]);
         q->front++;
     }
-    return *q;
 }
 
 int main(){
