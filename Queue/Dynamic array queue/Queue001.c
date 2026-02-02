@@ -94,14 +94,40 @@ void peek (struct Queue *q){
 // Main function
 int main(){
      struct Queue q;
+     //initialise the queue
      initialiseQueue(&q,10);
+
+     //add elements to the queue
      enqueue(&q,10);
      enqueue(&q,20);
      enqueue(&q,30);
      enqueue(&q,40);
+
      space();
+
+     //display the queue
+     display(&q);
+
+     space();
+
+     //dequeue elements from the queue
      dequeue(&q);
      dequeue(&q);
+
+     space();
+
+     //To check if the queue is empty
+     isEmpty(&q);
+
+     space();
+
+     //To check if the queue is full
+     isFull(&q);
+
+     space();
+
+     //To find the peek element of the queue
+     peek(&q);
 
     return 0;
 }
