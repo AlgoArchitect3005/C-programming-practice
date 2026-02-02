@@ -7,6 +7,7 @@ struct Queue{
     int rear;
     int size;
 };
+
 // Function to create a queue
 void initialiseQueue(struct Queue *q, int size){
     q->size = size;
@@ -14,6 +15,7 @@ void initialiseQueue(struct Queue *q, int size){
     q->rear=-1;
     q->arr=(int*)malloc(q->size * sizeof(int));
 }
+
 // Function to add element to the queue
 struct Queue enqueue(struct Queue *q, int data){
    if(q->rear==q->size-1){
@@ -31,6 +33,7 @@ struct Queue enqueue(struct Queue *q, int data){
     printf("Enqueued element is %d\n",q->arr[q->rear]);
     return *q;
 }
+
 // Function to delete element from the queue
 void dequeue(struct Queue *q){
     if(q->front==-1 || q->front > q->rear){
@@ -43,14 +46,14 @@ void dequeue(struct Queue *q){
 }
 
 int main(){
-     struct Queue *q;
-     q=initialiseQueue(q,10);
-     q=enqueue(q,10);
-     q=enqueue(q,20);
-     q=enqueue(q,30);
-     q=enqueue(q,40);
-     q=dequeue(q);
-     q=dequeue(q);
+     struct Queue q;
+     initialiseQueue(q,10);
+     enqueue(q,10);
+     enqueue(q,20);
+     enqueue(q,30);
+     enqueue(q,40);
+     dequeue(q);
+     dequeue(q);
 
     return 0;
 }
