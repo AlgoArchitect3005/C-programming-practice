@@ -57,6 +57,17 @@ void isEmpty (struct Queue *q){
         printf("Queue is not empty\n");
     }
 }
+
+//Function to check if the queue is full
+void isFull (struct Queue *q){
+    if(q->rear==q->size -1)
+    {
+        printf("Queue is full\n");
+    }
+    else{
+        printf("Queue is not full\n");
+    }
+}
 // Main function
 int main(){
      struct Queue q;
