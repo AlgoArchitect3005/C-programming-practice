@@ -75,6 +75,7 @@ void display (struct Queue *q){
         printf("Queue is empty\n");
     }
     else{
+        printf("The queue is : ");
         for(int i=q->front;i<=q->rear;i++){
             printf("%d ",q->arr[i]);
         }
