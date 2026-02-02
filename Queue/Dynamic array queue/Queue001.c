@@ -68,6 +68,19 @@ void isFull (struct Queue *q){
         printf("Queue is not full\n");
     }
 }
+
+//Function to display the queue
+void display (struct Queue *q){
+    if(q->front==-1 || q->front > q->rear){
+        printf("Queue is empty\n");
+    }
+    else{
+        for(int i=q->front;i<=q->rear;i++){
+            printf("%d ",q->arr[i]);
+        }
+        printf("\n");
+    }
+}
 // Main function
 int main(){
      struct Queue q;
