@@ -40,3 +40,11 @@ void reverse(struct Node** head){
         current = current->prev;
     }
 }
+
+void traverse(struct Node* head){
+    struct Node* temp=head;
+    while(temp!=NULL){
+        printf("%d ",temp->data);
+        temp=temp->next;
+    }
+}
