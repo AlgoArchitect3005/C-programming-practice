@@ -5,3 +5,9 @@ struct Node{
     int expo;
     struct Node* next;
 };
+struct Node* createNode(int coef, int expo);
+
+int main(){
+    struct Node* head= NULL;
+    head= (struct Node*)malloc(sizeof(struct Node));
+}
