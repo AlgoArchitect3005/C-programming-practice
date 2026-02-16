@@ -6,6 +6,7 @@ struct Node{
     struct Node* next;
 };
 struct Node* createNode(int coef, int expo);
+void displayPolynomial(struct Node* result);
 struct Node* addPolynomial(struct Node* p1, struct Node* p2);
 
 int main(){
@@ -51,14 +52,19 @@ int main(){
     
     
     struct Node* result= addPolynomial(p1, p4);
-    printf("Resultant Polynomial: ");
-    while(result != NULL){
-        printf("%dx^%d + ", result->coef, result->expo);
-        result= result->next;
-    }
+    displayPolynomial(result);
     printf("\n");
 }
 
+void displayPolynomial(struct Node* result){
+    printf("Resultant Polynomial: ");
+    while(result !=NULL){
+        printf("%dx^%d", result->coef, result->expo);
+        result= result->next;
+        if(result != NULL)
+        printf(" + ");
+    }
+}
 struct Node* createNode(int coef, int expo){
     struct Node*  newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->coef= coef;
@@ -106,5 +112,15 @@ struct Node* addPolynomial(struct Node* p1 , struct Node* p2){
             p2=p2->next;
         }
     }
+    while(p1 !=NULL){
+        temp->next=createNode(p1->coef,p1->expo);
+        temp=temp->next;
+        p1=p1->next;
+    }
+    while(p2 !=NULL){
+       temp->next=createNode(p2->coef,p2->expo);
+       temp=temp->next;
+       p2=p2->next;
+   }
     return result;
 }
