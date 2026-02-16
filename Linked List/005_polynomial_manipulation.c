@@ -30,9 +30,11 @@ int main(){
     struct Node* p4= NULL;
     struct Node* p5= NULL;
     struct Node* p6= NULL;
+    struct Node* p7= NULL;
     p4= (struct Node*)malloc(sizeof(struct Node));
     p5= (struct Node*)malloc(sizeof(struct Node));
     p6= (struct Node*)malloc(sizeof(struct Node));
+    p7= (struct Node*)malloc(sizeof(struct Node));
     
     p4->coef= 2;
     p4->expo= 3;
@@ -42,7 +44,11 @@ int main(){
     p5->next= p6;
     p6->coef= 4;
     p6->expo= 1;
-    p6->next= NULL;
+    p6->next= p7;
+    p7->coef= 1;
+    p7->expo= 5;
+    p7->next= NULL;
+    
     
     struct Node* result= addPolynomial(p1, p4);
     printf("Resultant Polynomial: ");
