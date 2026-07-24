@@ -1,4 +1,4 @@
-// Online C compiler to run C program online
+ // Online C compiler to run C program online
 #include <stdio.h>
 #include<stdlib.h>
 #include<malloc.h>
@@ -51,10 +51,14 @@ int main() {
     p->right=p2;
     p1->left=p3;
     p1->right=p4;
+    
+    //traversal
+    printf("Preorder: ");
     preorder(p);
-    printf("\n");
+    printf("\nPostorder: ");
     postorder(p);
-    printf("\n");
+    printf("\nInorder: ");
     inorder(p);
+
     return 0;
 }
